@@ -1,0 +1,48 @@
+{
+  // 상위 디렉토리의 tsconfig.json 설정을 상속
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    // 컴파일된 파일이 저장될 디렉토리
+    "outDir": "dist",
+    // 사용할 라이브러리 정의
+    "lib": ["ES6", "dom"],
+    // 소스맵 생성 여부
+    "sourceMap": true,
+    // JavaScript 파일 컴파일 허용 여부
+    "allowJs": false,
+    // React JSX 처리 방식
+    "jsx": "react-jsx",
+    // 모듈 해석 방식
+    "moduleResolution": "node",
+    // 소스 파일의 루트 디렉토리
+    "rootDirs": ["src"],
+    // 모듈 해석을 위한 기본 경로
+    "baseUrl": ".",
+    // 엄격한 타입 체크 옵션들
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    // 사용하지 않는 지역 변수 체크
+    "noUnusedLocals": true,
+    // CommonJS 모듈과 ES 모듈 간의 상호 운용성 개선
+    "esModuleInterop": true,
+    // 선언 파일(.d.ts) 생성
+    "declaration": true,
+    // 데코레이터 메타데이터 생성
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    // JSON 모듈 import 허용
+    "resolveJsonModule": true,
+    // 헬퍼 함수 사용 (코드 중복 감소)
+    "importHelpers": true,
+    // 모듈 경로 별칭 설정
+    "paths": {
+      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
+    }
+  },
+  // 컴파일에 포함할 파일 패턴
+  "include": ["src/**/*"],
+  // 컴파일에서 제외할 파일 패턴
+  "exclude": ["node_modules", "dist", "**/*.stories.tsx"]
+}
