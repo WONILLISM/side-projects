@@ -6,6 +6,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "rollup-plugin-typescript2";
 import json from "@rollup/plugin-json";
 import { terser } from "rollup-plugin-terser";
+import { vanillaExtractPlugin } from "@vanilla-extract/rollup-plugin";
 
 export default {
   input: "src/index.ts", // 메인 엔트리 경로
@@ -27,6 +28,7 @@ export default {
   ],
   plugins: [
     peerDepsExternal(), // peerDependencies에 있는 모듈을 외부 모듈로 처리 - 번들링에 포함되지 않음
+    vanillaExtractPlugin(), // vanilla-extract 플러그인 추가 - css 변수 생성
     resolve(), // 모듈 경로 해석
     commonjs(), // CommonJS 모듈을 ES6 Module로 변환
     typescript({

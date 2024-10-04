@@ -3,7 +3,7 @@ import { Button } from "@packages/ui";
 function App() {
   return (
     <>
-      <Button />
+      <Button>Default</Button>
     </>
   );
 }
