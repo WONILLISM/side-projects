@@ -3,7 +3,7 @@
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import typescript from "@rollup/plugin-typescript2";
+import typescript from "rollup-plugin-typescript2";
 import json from "@rollup/plugin-json";
 import { terser } from "rollup-plugin-terser";
 
@@ -36,7 +36,6 @@ export default {
           declarationDir: "./dist",
         },
       },
-      rollupCommonJSResolveHack: true,
       clean: true,
     }), // typescript 파일을 컴파일, 선언 파일( .d.ts ) 생성
     json(), // json 파일을 읽어오는 플러그인

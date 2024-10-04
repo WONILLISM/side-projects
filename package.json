@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "ui": "pnpm --filter @packages/ui"
+    "@apps/test": "pnpm --filter @apps/test",
+    "@packages/ui": "pnpm --filter @packages/ui"
   },
   "keywords": [],
   "author": "WONILLISM",

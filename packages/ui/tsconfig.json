@@ -2,6 +2,16 @@
   // 상위 디렉토리의 tsconfig.json 설정을 상속
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    // ES2020 문법을 사용할 수 있게 설정 (예: optional chaining, nullish coalescing)
+    "target": "ES2020",
+    // 최신 ECMAScript 모듈 시스템 사용
+    "module": "ESNext",
+    // 엄격한 타입 검사 활성화 (null 검사, 암시적 any 타입 방지 등)
+    "strict": true,
+    // 선언 파일(*.d.ts)의 타입 검사 생략하여 컴파일 속도 향상
+    "skipLibCheck": true,
+    // 파일 이름의 대소문자 일관성 강제 (대소문자 구분 운영체제 간 문제 방지)
+    "forceConsistentCasingInFileNames": true,
     // 컴파일된 파일이 저장될 디렉토리
     "outDir": "dist",
     // 사용할 라이브러리 정의
@@ -38,7 +48,8 @@
     "importHelpers": true,
     // 모듈 경로 별칭 설정
     "paths": {
-      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
+      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"],
+      "@packages/ui/*": ["src/*"]
     }
   },
   // 컴파일에 포함할 파일 패턴
